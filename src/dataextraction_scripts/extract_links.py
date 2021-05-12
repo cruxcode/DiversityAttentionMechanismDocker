@@ -2,7 +2,7 @@
 # Keep only the unique links.
 
 from bs4 import *
-import urllib2
+from urllib.request import urlopen
 import sys
 import re
 import os
@@ -18,7 +18,7 @@ def retrieve_links_from_file(filename):
 	for lines in links :
 
 		print (lines)
-		page = urllib2.urlopen(lines)
+		page = urlopen(lines)
 		soup = BeautifulSoup(page.read())
 
 		write_name = soup.find('h1').string[9:]

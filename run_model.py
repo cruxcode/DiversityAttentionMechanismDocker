@@ -308,8 +308,14 @@ class run_model:
             saver = tf.train.Saver()
 
             # Create a session for running Ops on the Graph.
+            # cruxcode
+            # prevent tensorflow from allocating all gpu memory
+            # gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.3)
+            # sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options,allow_soft_placement=True))
             sess = tf.Session()
-
+            # config = tf.ConfigProto()
+            # config.graph_options.rewrite_options.shape_optimization = 2
+            # session = tf.Session(config=config)
             outdir = self.config.config_dir["outdir"]
 
             # if best_model exists pick the weights from there:

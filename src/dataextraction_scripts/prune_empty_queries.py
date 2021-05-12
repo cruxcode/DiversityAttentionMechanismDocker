@@ -25,7 +25,7 @@ f1 = open(sys.argv[1], "r")
 f2 = open("temp_query_content", "r")
 
 for (l1, l2) in zip(f1,f2):
-	print l1
+	print (l1)
 	l2 = l2.lower()
 
 	if (l2.isspace()) or ('pro/con' in l2) or ('subquestion here' in l2) or ('sub question here' in l2) or ('Videos' in l2) or ('Pro and con videos' in l2) or ('argument #' in l2) or (l2.startswith("<q>argument")):

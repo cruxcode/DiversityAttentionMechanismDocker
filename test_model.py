@@ -257,8 +257,8 @@ class run_model:
                 print ("Test Loss:{}".format(test_loss))
 
             else:
-		print ('Best model does not exist in output directory')
-		return
+                print ('Best model does not exist in output directory')
+                return
 
             test_loss = self.do_eval(sess, self.dataset.datasets["test"])
 

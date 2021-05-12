@@ -29,8 +29,8 @@ def split_file(filename):
 					f1.write(x + " <eos>\n")
 					f2.write(x1 + " <eos>\n")
 
- 				else:
-					print count
+				else:
+					print (count)
 					print (x)
 			count = count + 1
 

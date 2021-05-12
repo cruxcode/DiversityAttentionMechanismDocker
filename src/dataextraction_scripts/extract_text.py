@@ -1,7 +1,7 @@
 from bs4 import *
 import bs4
 import sys
-import urllib2
+from urllib.request import urlopen
 import os
 import requests
 from requests.exceptions import HTTPError
@@ -100,7 +100,7 @@ def get_content(temp):
 def extract_single_link(link, count, dataset):
 
 	try:
-		page = urllib2.urlopen(link)
+		page = urlopen(link)
 
 	except:
 		print ("Page not downloaded")

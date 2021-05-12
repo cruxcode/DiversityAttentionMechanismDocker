@@ -35,8 +35,8 @@ def make_different_datasets(content, summary, query, number_of_folds, name):
 	j = 0
 	c, s, q = fill(content, summary, query)
 
-	exms_valid = len(c)/number_of_folds
-	exms_test = len(c)/number_of_folds
+	exms_valid = len(c)//number_of_folds
+	exms_test = len(c)//number_of_folds
 	exms_train = len(c) - exms_test - exms_valid
 
 	for count in range(1,number_of_folds+1):
@@ -45,7 +45,7 @@ def make_different_datasets(content, summary, query, number_of_folds, name):
 			os.makedirs(os.path.join(name, str(count)))
 
 		i = j
-		print i
+		print (i)
 		t = 0
 		valid_content = []
 		valid_summary = []

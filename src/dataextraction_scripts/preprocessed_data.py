@@ -29,7 +29,7 @@ def preprocess(s, max_tokens):
     tokens = WhitespaceTokenizer().tokenize(s)
     #s = replace_the_unfrequent(tokens)
     if (len(tokens) > max_tokens):
-	tokens = tokens[:max_tokens]
+        tokens = tokens[:max_tokens]
 
     s = " ".join(tokens)
     return s, len(tokens)
@@ -69,7 +69,7 @@ def shuffle_data(content, summary, query, name):
 	random.shuffle(combine)
 	#print combine
 
-	print name
+	print (name)
 	with open(name + "_content", "w") as w1, open(name+"_summary", "w") as w2, open(name+"_query", "w") as w3:
 
 		for c in combine:
